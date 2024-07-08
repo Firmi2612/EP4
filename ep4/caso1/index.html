@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubos de Números Impares</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div class="contenedor">
+        <h2>CUBOS DE NUMEROS IMPARES</h2>
+        <div id="resultado"> 
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var n1 = parseInt(prompt("Ingrese el primer número:"));
+                    var n2 = parseInt(prompt("Ingrese el segundo número:"));
+                    
+                    if (n1 > n2) {
+                        var temp = n1;
+                        n1 = n2;
+                        n2 = temp;
+                    }
+                    
+                    var numeromayor = n1;
+                    
+                    do {
+                        if (numeromayor % 2 !== 0) { 
+                            var cubo = numeromayor * numeromayor * numeromayor;
+                            document.write("El cubo de " + numeromayor + " es " + cubo + "<br>");
+                        }
+                        numeromayor++;
+                    } while (numeromayor <= n2);
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
